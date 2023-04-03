@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --color-violet: hsl(257, 40%, 49%);
+  --color-soft-magenta: hsl(300, 69%, 71%);
+}
+/* for headings:
+font-family: 'Poppins', sans-serif; 400,600 
+ 
+ for body:
+ font-family: 'Open Sans', sans-serif; 400
+ */
+body {
+  background-color: var(--color-violet);
+  height: 130vh;
+}
+
+/* typography */
+
+p,
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+h1 {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.5;
+  padding: 0 1.9px;
+}
+p {
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 400;
+  word-spacing: 5px;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  padding: 1rem 5rem;
+  color: var(--color-violet);
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px 1px rgb(56, 56, 56);
+}
+.btn:hover {
+  background: var(--color-soft-magenta);
+  color: white;
+}
+.text-center {
+  text-align: center;
+}
+@media (min-width: 1440px) {
+  .text-center {
+    text-align: start;
+  }
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  .btn {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+  }
+  body {
+    height: 100vh;
+  }
+}
+
+/* design */
+
+img {
+  width: 100%;
+}
+
+.navbar {
+  padding: 4rem 0;
+}
+.grid {
+  display: grid;
+  gap: 50px;
+}
+.container {
+  margin: 0 5%;
+}
+.logo {
+  width: auto;
+}
+.media {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  margin-top: 100px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  font-size: 1.5rem;
+  padding: 20px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.links:hover {
+  border: 1px solid var(--color-soft-magenta);
+  color: var(--color-soft-magenta);
+}
+
+@media (min-width: 1440px) {
+  .grid {
+    grid-template-columns: 55% auto;
+  }
+
+  body {
+    background: url(images/bg-desktop.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--color-violet);
+  }
+  footer {
+    justify-content: end;
+    margin: 50px 0;
+  }
+  .media {
+    margin: 0;
+  }
+  .navbar {
+    padding-top: 4rem;
+    margin-bottom: 1rem;
+  }
+}
